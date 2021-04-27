@@ -1,0 +1,70 @@
+.navbar-brand {
+    margin-left: 20px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#bdy {
+    background-color: #ffe4ca;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe4ca;
+}
+
+#btn_register {
+    float: left;
+    margin-bottom: 40px;
+    background-color: black;
+}
+
+#btn_register:hover {
+    background-color: #212529;
+}
+
+#btn_submit {
+    float: right;
+    margin-bottom: 40px;
+    background-color: black;
+}
+
+#btn_submit:hover {
+    background-color: #212529;
+}
+
+.card-footer {
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 35px;
+    font-weight: bolder;
+}
+
+#btn_login {
+    margin-left: 20px;
+    background-color: #212529;
+}
+
+#btn_login:hover {
+    background-color: #0d6efd;
+}
+
+#btn_logout {
+    float: right;
+    margin-right: 40px;
+    background-color: #212529;
+}
+
+#btn_logout:hover {
+    background-color: #0d6efd;
+}
+
+#card {
+    box-shadow: 20px 20px 50px 15px #cbb299;
+}
