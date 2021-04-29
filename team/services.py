@@ -26,7 +26,7 @@ def get_teams():
     querystring = {"page":"0"}
 
     headers = { 
-        'x-rapidapi-key': "a7a397fd89msh4c17f53b3218f40p1bd67cjsn97378b49e88a",
+        'x-rapidapi-key': os.getenv('DO_ACCESS_TOKEN'),
         'x-rapidapi-host': "free-nba.p.rapidapi.com"
     }
 
