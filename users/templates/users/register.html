@@ -1,0 +1,21 @@
+{% extends 'users/layout.html' %} {% load static %} {% block title %} Register {% endblock %} {% block body %}{% block btn %}<a id="btn_login" class="btn btn-primary" href="{% url 'users:login' %}" role="button">Login</a>{% endblock %}
+<div class="container">
+    <div class="card text-center" id="card">
+        <div class="text-center ">
+            <div class="card-body">
+                <h1 class="h3 mb-3 card-title">Register Here</h1>
+                <form action="{% url 'users:register' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.as_p }}
+                        <input type="submit" class="form-group btn btn-primary" value="Register" id="btn_submit">
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                {% if message %} {{ message }} {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

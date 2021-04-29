@@ -1,5 +1,6 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
@@ -26,4 +27,18 @@ def logout_view(request):
     logout(request)
     return render(request, "users/login.html",{
                 "message": "Logged Out Successfully!!"})
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return HttpResponseRedirect(reverse('users:login'))
+    else:
+        form = UserCreationForm()
+    return render(request, 'users/register.html', {'form': form})
     

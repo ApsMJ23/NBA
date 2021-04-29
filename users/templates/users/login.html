@@ -1,5 +1,5 @@
 {% extends 'users/layout.html' %} {% load static %} {% block title %} NBA {% endblock %} {% block body %} {% block btn %}<a id="btn_login" class="btn btn-primary" href="{% url 'users:login' %}" role="button">Login</a>{% endblock %}
-<div class="container">
+<div class="container" id="login_container">
     <div class="card text-center" id="card">
         <div class="text-center ">
             <div class="card-body">
@@ -10,7 +10,7 @@
                         <input type="text" name="username" class="form-control" id="username_input" name="username" placeholder="Enter Username"><br>
                         <input type="password" name="password" class="form-control" id="password_input" placeholder="Password"><br>
                         <input type="submit" class="form-group btn btn-primary" value="Login" id="btn_submit">
-                        <a id="btn_register" class="btn btn-primary" href="#" role="button">Register</a>
+                        <a id="btn_register" class="btn btn-primary" href="{% url 'users:register' %}" role="button">Register</a>
                     </div>
                 </form>
             </div>

@@ -1,1 +1,24 @@
-{% extends 'users/layout.html' %} {% load static %} {% block title %} NBA {% endblock %} {% block body %} {% block btn %}<a id="btn_logout" class="btn btn-primary" href="{% url 'users:logout' %}" role="button">Logout</a>{% endblock %} {% endblock %}
+{% extends 'users/layout.html' %} {% load static %} {% block title %} NBA {% endblock %} {% block body %} {% block btn %}<a id="btn_logout" class="btn btn-primary" href="{% url 'users:logout' %}" role="button">Logout</a>{% endblock %}
+<script src="{% static 'team/api_script.js' %}"></script>
+<div class="container-fluid">
+    <h1 class="display-1" id="team_title">Teams</h1>
+</div>
+<div class="container" id="card_container">
+    {% for team in teams %}
+    <div class="card " style="width: 20rem;">
+        <img class="card-img-top" src="http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/{{ team.abbreviation|lower }}.png" alt="Card image cap">
+        <div class="card-body">
+            <h2 class="card_title">{{ team.full_name }}</h2>
+            <ul class="card-text" style="column-count: 2;">
+                <li>ID:{{team.id}}</li>
+                <li>Abb.:{{team.abbreviation}}</li>
+                <li>City:{{team.city}}</li>
+                <li>Conf.:{{team.conference}}</li>
+                <li>Div.:{{team.division}}</li>
+                <li>Name:{{team.name}}</li>
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
