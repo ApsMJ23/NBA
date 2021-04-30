@@ -1,5 +1,15 @@
 {% extends 'users/layout.html' %} {% load static %} {% block title %} NBA {% endblock %} {% block btn %}
 <a id="btn_login" class="btn btn-primary" href="{% url 'users:login' %}" role="button">Login</a>
 <a id="btn_register1" class="btn btn-primary" href="{% url 'users:register' %}" role="button">Register</a> {% endblock %} {% block body %}
-<br><br><br><br>
-<h1>User Index</h1> {% endblock %}
+<h1 id="index_title">JAMES NAISMITH AND THE INVENTION OF BASKETBALL</h1>
+<div class="container" style="font-size: x-large; padding-top: 50%;">
+    In December 1891, college teacher James Naismith had a problem. His students, forced indoors because of winter, had become rowdy. They had a lot of energy, but no way to burn it off. It was too cold to play football and baseball, and too dangerous to
+    play those sports in the gym.<br><br> The school asked Naismith to invent a new indoor sport. Naismith remembered a rock-tossing game he played as a child. How about a game where players threw a ball at a target? The team that tossed the most
+    balls into the target would win.<br><br> Naismith called his new game “basket ball” and wrote up 13 rules. Two peach baskets and a soccer ball were the equipment. Naismith put the baskets at each end of the gym, nailed 10 feet above the floor. The
+    teams each had nine players. Naismith threw the ball in the air for the first tipoff. On December 21, 1891, the game of basketball was born in Springfield, Massachusetts.<br><br> The new sport quickly grew in popularity. Naismith’s students went on
+    to become teachers and coaches, spreading the game. Teams sprung up at high schools and colleges. Boys and girls across the nation began playing basketball.<br><br> Rules changes made the game more fun. Dribbling was allowed. Backboards were added
+    to make scoring easier. The peach basket was replaced with a net that allowed the ball to go through, speeding up play. A new ball was introduced, one that was easier to dribble and shoot.<br><br> Fans flocked to see this exciting new sport. Soon
+    professional leagues were formed. In the 1920s, pro teams such as the Original Celtics and the Harlem Rens drew huge crowds on nationwide tours. The game spread to every corner of the world.<br><br> Basketball became an Olympic sport in 1936. For
+    the first Olympic basketball game, Naismith tossed the ball for the tipoff. After the championship game, he presented the medals to the players. The game James Naismith invented as a winter “distraction” had turned into a global sport.
+</div>
+{% endblock %}

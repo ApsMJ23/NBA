@@ -7,7 +7,7 @@
 <div class="container" id="card_container">
     {% for p,last,first in player %}
     <a href="{{ team.abbreviation|lower }}" style="text-decoration: none; color: black;">
-        <div class="card " style="width: 20rem;">
+        <div class="card slide-in-fwd-center" style="width: 20rem;">
             {% if first == dlo or firsr == nan%}
             <img class="card-img-top" src="https://nba-players.herokuapp.com/players/{{ last }}" alt="https://nba-players.herokuapp.com/players/james"> {% else %}<img class="card-img-top" src="https://nba-players.herokuapp.com/players/{{ last }}/{{first|lower}}"
                 alt="Card image cap">{%endif%}

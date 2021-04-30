@@ -8,7 +8,7 @@
     <a href="bro" style="text-decoration: none; color: black;">
     {% else %}
     <a href="{{ team.abbreviation|lower }}" style="text-decoration: none; color: black;">{% endif %}
-        <div class="card " style="width: 20rem;">
+        <div class="card swing-in-top-fwd" id = "card1" style="width: 20rem;">
             <img class="card-img-top" src="http://i.cdn.turner.com/nba/nba/.element/img/1.0/teamsites/logos/teamlogos_500x500/{{ team.abbreviation|lower }}.png" alt="Card image cap">
             <div class="card-body">
                 <h2 class="card_title">{{ team.full_name }}</h2>
