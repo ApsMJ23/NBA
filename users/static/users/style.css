@@ -51,6 +51,15 @@ body {
     background-color: #212529;
 }
 
+#btn_team {
+    margin-left: 20px;
+    background-color: #212529;
+}
+
+#btn_team:hover {
+    background-color: #0d6efd;
+}
+
 #btn_register1 {
     margin-left: 10px;
     background-color: #212529;
@@ -102,4 +111,12 @@ body {
 
 .card-img-top {
     background-color: #212529;
+}
+
+#player_title {
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 50px;
+    color: #212529;
+    text-shadow: 5px 5px #cbb299;
 }

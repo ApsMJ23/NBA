@@ -1,0 +1,29 @@
+{% extends 'users/layout.html' %} {% load static %} {% block title %} NBA {% endblock %} {% block btn %}
+<a id="btn_logout" class="btn btn-primary" href="{% url 'users:logout' %}" role="button">Logout</a>
+<a id="btn_team" class="btn btn-primary" href="{% url 'team:index' %}" role="button">Teams</a> {% endblock %} {% block body %}
+<div class="container-fluid">
+    <h1 class="display-1" id="player_title">Players</h1>
+</div>
+<div class="container" id="card_container">
+    {% for p,last,first in player %}
+    <a href="{{ team.abbreviation|lower }}" style="text-decoration: none; color: black;">
+        <div class="card " style="width: 20rem;">
+            {% if first == dlo or firsr == nan%}
+            <img class="card-img-top" src="https://nba-players.herokuapp.com/players/{{ last }}" alt="https://nba-players.herokuapp.com/players/james"> {% else %}<img class="card-img-top" src="https://nba-players.herokuapp.com/players/{{ last }}/{{first|lower}}"
+                alt="Card image cap">{%endif%}
+            <div class="card-body">
+                <h2 class="card_title">{{ p.name }}</h2>
+                <ul class="card-text" style="column-count: 2;">
+                    <li>Rating:{{p.player_efficiency_rating}}</li>
+                    <li>PPG:{{p.points_per_game}}</li>
+                    <li>Games Pl:{{p.games_played}}</li>
+                    <li>MPG:{{p.minutes_per_game}}</li>
+                    <li>FGP:{{p.field_goal_percentage}}</li>
+                    <li>3PP:{{p.three_point_percentage}}</li>
+                </ul>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}
